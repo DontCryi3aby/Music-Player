@@ -1,0 +1,23 @@
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    
+}
+
+
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    
+}
+
+
+
+/* Mobile */
+@media (max-width: 739px) {
+    .music-card,
+    .playlist {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}

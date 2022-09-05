@@ -1,0 +1,89 @@
+:root {
+    --primary-color: #3a2222;
+    --sub-color: #ffe7e7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );
+}
+  
+html {
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none !important;
+}
+
+.tooltip, .tooltip::after {
+    --scale: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .tooltip {
+    position: absolute;
+    background-color: #fff;
+    font-size: 1.2rem;
+    width: max-content;
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 20px;
+    bottom: 70%;
+    right: 50%;
+    transform: translateX(50%) translateY(-50%) scale(var(--scale));
+    transform-origin: bottom;
+  }
+  
+  .tooltip::after {
+    position: absolute;
+    content: "";
+    top: calc(100% - 1px);
+    right: 50%;
+    border-width: 6px 8px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #fff;
+    transform: translate(50%) scale(var(--scale));
+    transform-origin: top;
+  }
+  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 739px) {
+    .music-card,
+    .playlist {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
