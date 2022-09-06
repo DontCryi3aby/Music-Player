@@ -53,6 +53,12 @@ const app = {
     isFavourite: false,
     songs: [
         {
+            name: 'Little do you know',
+            author: 'Alex & Sierra',
+            image: './assets/img/Suzy4.jpg',
+            path: './assets/music/Little_do_you_know_Alex_&_Sierra.mp3'
+        },
+        {
             name: 'When night falls',
             author: 'Eddi Kim',
             image: './assets/img/Suzy2.jpg',
@@ -135,12 +141,6 @@ const app = {
             author: 'Elgit Doda',
             image: './assets/img/larg.jfif',
             path: './assets/music/Larg_Elgit_Doda.mp3'
-        },
-        {
-            name: 'Little do you know',
-            author: 'Alex & Sierra',
-            image: './assets/img/Suzy4.jpg',
-            path: './assets/music/Little_do_you_know_Alex_&_Sierra.mp3'
         },
         {
             name: 'Love me like you do',
@@ -521,8 +521,8 @@ const app = {
         // Xử lý render bài hát ra Playlist
         this.renderSong()
 
-        // Tải bài hát bất kì vào UI để sẵn sàng phát nhạc
-        this.randomSong()
+        // Tải bài hát hiện tại vào UI để sẵn sàng phát nhạc
+        this.loadCurrentSong()
 
         // Lắng nghe, xử lý các sự kiện (DOM Events)
         this.handleEvents()
